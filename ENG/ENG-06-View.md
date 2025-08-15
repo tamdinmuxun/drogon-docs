@@ -13,7 +13,7 @@ The earliest web applications embed HTML into the program code to achieve the pu
 Drogon's CSP solution is very simple, we use special markup symbols to embed C++ code into the HTML page. Among them:
 
 - The content between the tags `<%inc` and `%>` is considered to be the part of the header file that needs to be referenced. Only the `#include` statement can be written here, such as `<%inc#include "xx.h" %>`, but many common header files are automatically included by drogon. The user basically does not use this tag;
-- Everything between the tags `<%c++` and `%>` is treated as C++ code, such as `<c++ std:string name="drogon"; %>`;
+- Everything between the tags `<%c++` and `%>` is treated as C++ code, such as `<%c++ std:string name="drogon"; %>`;
 - C++ code is generally transferred to the target source file intact, except for the following two special tags:
   - `@@` represents the data variable passed by the controller, from which you can get the content you want to display;
   - `$$` represents a stream object representing the content of the page, and the content to be displayed can be displayed on the page by the `<<` operator;
