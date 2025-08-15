@@ -43,7 +43,9 @@ class EchoWebsock:public drogon::WebSocketController<EchoWebsock>
 ```c++
 //EchoWebsock.cc
 #include "EchoWebsock.h"
-void EchoWebsock::handleNewMessage(const WebSocketConnectionPtr &wsConnPtr, std::string &&message, const WebSocketMessageType &type)
+void EchoWebsock::handleNewMessage(const WebSocketConnectionPtr &wsConnPtr,
+                                  std::string &&message,
+                                  const WebSocketMessageType &type)
 {
     //write your application logic here
 }
@@ -87,7 +89,9 @@ void EchoWebsock::handleConnectionClosed(const WebSocketConnectionPtr &wsConnPtr
   ```c++
   //EchoWebsock.cc
   #include "EchoWebsock.h"
-  void EchoWebsock::handleNewMessage(const WebSocketConnectionPtr &wsConnPtr,std::string &&message, const WebSocketMessageType &type)
+  void EchoWebsock::handleNewMessage(const WebSocketConnectionPtr &wsConnPtr,
+                                    std::string &&message,
+                                    const WebSocketMessageType &type)
   {
       //write your application logic here
       wsConnPtr->send(message);
