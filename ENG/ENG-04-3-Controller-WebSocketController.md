@@ -87,7 +87,7 @@ void EchoWebsock::handleConnectionClosed(const WebSocketConnectionPtr &wsConnPtr
   ```c++
   //EchoWebsock.cc
   #include "EchoWebsock.h"
-  void EchoWebsock::handleNewMessage(const WebSocketConnectionPtr &wsConnPtr,std::string &&message)
+  void EchoWebsock::handleNewMessage(const WebSocketConnectionPtr &wsConnPtr,std::string &&message, const WebSocketMessageType &type)
   {
       //write your application logic here
       wsConnPtr->send(message);
